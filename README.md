@@ -14,5 +14,6 @@ event_stream_name = ''
 
 ## Setup
 -Create and API account through the Cisco AMP For Enpoints Admin dashboard to get the ID and Key variables
+
 -To get the AMQP password and event stream name, you will need to create an event stream with Cisco's API of the events you would like to log. Documetation on that can be found at Cisco's site: https://api-docs.amp.cisco.com/api_actions/details?api_action=POST+%2Fv1%2Fevent_streams&api_host=api.amp.cisco.com&api_resource=EventStream&api_version=v1
 
