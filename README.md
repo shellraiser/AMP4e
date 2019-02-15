@@ -1,4 +1,4 @@
-# AMP4e
+# AMP4e Events
 AMP For Endpoints python script to ingest AMQP messages to a local log file. This was originally setup for Sumo Logic, but can be used for other SIEMs.
 
 ## Prerequisites
