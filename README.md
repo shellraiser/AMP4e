@@ -4,7 +4,7 @@ AMP For Endpoints python script to ingest AMQP messages to a local log file. Thi
 ## Prerequisites
 Four variables need to be input at the beginning of the script for this to work:
 
-CLIENT_ID = ''
+API_ID = ''
 
 API_KEY = ''
 
