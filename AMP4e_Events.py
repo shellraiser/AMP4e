@@ -13,7 +13,7 @@ from logging.handlers import RotatingFileHandler
 CLIENT_ID = '<redacted>'
 API_KEY = '<redacted>'
 AMPQ_PW = '<redacted>' 
-event_stream_name = '<redacted>' 
+EVENT_STREAM_NAME = '<redacted>' 
 
 #Logging configuration
 amp_logger = logging.getLogger('AMPLogger')
