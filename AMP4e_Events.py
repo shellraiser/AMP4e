@@ -9,7 +9,7 @@ import time
 from logging import handlers
 from logging.handlers import RotatingFileHandler
 
-# YOU NEED TO input the required info into the CLIENT_ID, API_KEY, AMPQ_PW, AND event_stream_name STRINGS
+# Input the required info into the CLIENT_ID, API_KEY, AMPQ_PW, and EVENT_STREAM_NAME parameters
 CLIENT_ID = '<redacted>'
 API_KEY = '<redacted>'
 AMPQ_PW = '<redacted>' 
@@ -31,14 +31,12 @@ session = requests.Session()
 session.auth = (CLIENT_ID, API_KEY)
 
 event_streams = session.get(api_endpoint).json()['data']
-
 event_stream = {}
-
 for e in event_streams:
     if e['name'] is EVENT_STREAM_NAME:
         event_stream = e
 
-amqp_url = 'amqps://{user_name}:',AMQP_PW,'@{host}:{port}'.format(
+amqp_url = 'amqps://{user_name}:'AMQP_PW'@{host}:{port}'.format(
     **e['amqp_credentials'])
 queue = e['amqp_credentials']['queue_name']
 parameters = pika.URLParameters(amqp_url)
