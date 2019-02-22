@@ -10,7 +10,7 @@ from logging import handlers
 from logging.handlers import RotatingFileHandler
 
 # Input the required info into the CLIENT_ID, API_KEY, AMPQ_PW, and EVENT_STREAM_NAME parameters
-CLIENT_ID = '<redacted>'
+API_ID = '<redacted>'
 API_KEY = '<redacted>'
 AMPQ_PW = '<redacted>' 
 EVENT_STREAM_NAME = '<redacted>' 
@@ -28,7 +28,7 @@ logging.basicConfig(filename = '/opt/AMP4e/Logs/AMP4e.log', level=logging.INFO, 
 api_endpoint = 'https://api.amp.cisco.com/v1/event_streams'
 
 session = requests.Session()
-session.auth = (CLIENT_ID, API_KEY)
+session.auth = (API_ID, API_KEY)
 
 event_streams = session.get(api_endpoint).json()['data']
 event_stream = {}
