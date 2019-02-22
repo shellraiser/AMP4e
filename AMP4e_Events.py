@@ -9,7 +9,7 @@ import time
 from logging import handlers
 from logging.handlers import RotatingFileHandler
 
-# Input the required info into the CLIENT_ID, API_KEY, AMPQ_PW, and EVENT_STREAM_NAME parameters
+# Input the required info into the API_ID, API_KEY, AMPQ_PW, and EVENT_STREAM_NAME parameters
 API_ID = '<redacted>'
 API_KEY = '<redacted>'
 AMPQ_PW = '<redacted>' 
