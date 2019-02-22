@@ -35,7 +35,7 @@ event_streams = session.get(api_endpoint).json()['data']
 event_stream = {}
 
 for e in event_streams:
-    if e['name'] is event_stream_name:
+    if e['name'] is EVENT_STREAM_NAME:
         event_stream = e
 
 amqp_url = 'amqps://{user_name}:'AMQP_PW'@{host}:{port}'.format(
