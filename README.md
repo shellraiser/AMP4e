@@ -10,7 +10,7 @@ API_KEY = ''
 
 AMQP_PW = ''
 
-event_stream_name = ''
+EVENT_STREAM_NAME = ''
 
 ## Setup
 -Create an API account through the Cisco AMP For Enpoints Admin dashboard to get the ID and Key variables
