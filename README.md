@@ -29,4 +29,4 @@ https://api.amp.cisco.com/v1/event_streams?event_type[]=553648130&event_type[]=5
 -You can create a service to make sure this always running, I have it running now smoothly for my own Sumo Logic collector. Feel free to message if you need help!
 
 ## Updates
--06/04/2019 reworked
+-06/04/2019 reworked consume order
