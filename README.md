@@ -1,5 +1,5 @@
 # AMP4e Events
-Cisco AMP For Endpoints python script to ingest AMQP messages to a local log file. This was originally setup for Sumo Logic, but can be used for other SIEMs. My goal is to make this script as simple as possible, so all you need to do is enter in a few variables to get going.
+Cisco AMP For Endpoints python script to ingest AMQP messages to a local log file. This was originally setup for Sumo Logic, but can be used for other SIEMs. 
 
 ## Prerequisites
 Four variables need to be input at the beginning of the script for this to work:
