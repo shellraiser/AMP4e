@@ -24,7 +24,9 @@ https://api.amp.cisco.com/v1/event_streams?event_type[]=553648130&event_type[]=5
 
 -Make sure you have Python 3.7 installed, and pip'd the necessary packages. 
 
--Then run the script ~> python ./AMP4e_events.py
+-Then run the script ~> python ./AMP4e_events.py to confirm you are ingesting
+
+-You can create a service to make sure this always running, I have it running now smoothly for my own Sumo Logic collector. Feel free to message if you need help!
 
 ## Updates
--Current script works, but connection drops if there are no new events within a certain period of time. Working on getting logic into the script to automatically restart connection if it drops.
+-06/04/2019 reworked
