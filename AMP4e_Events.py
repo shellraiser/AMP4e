@@ -10,10 +10,10 @@ from logging import handlers
 from logging.handlers import RotatingFileHandler
 
 # Input the required info into the API_ID, API_KEY, AMPQ_PW, and EVENT_STREAM_NAME parameters
-API_ID = '<redacted>'
-API_KEY = '<redacted>'
-AMPQ_PW = '<redacted>' 
-EVENT_STREAM_NAME = '<redacted>' 
+API_ID = '9ecb6f37d35cdb4b1f4b'
+API_KEY = '02c3d0c5-3951-4204-85fc-ea2245e06e81'
+AMPQ_PW = 'f64462128f46c053d53e72623e7c7354438b55cc'
+EVENT_STREAM_NAME = 'AMP_Logs'
 
 #Logging configuration
 amp_logger = logging.getLogger('AMPLogger')
@@ -36,7 +36,7 @@ for e in event_streams:
     if e['name'] is EVENT_STREAM_NAME:
         event_stream = e
 
-amqp_url = 'amqps://{user_name}:',AMQP_PW,'@{host}:{port}'.format(
+amqp_url = 'amqps://{user_name}:7fd3b6d11c5aa4f65abeedbd1218e06c28d86706@{host}:{port}'.format(
     **e['amqp_credentials'])
 queue = e['amqp_credentials']['queue_name']
 parameters = pika.URLParameters(amqp_url)
@@ -52,7 +52,7 @@ def callback(ch, method, properties, body):
     logging.info(" [x] Received prop:\t%r" % properties)
     logging.info(" [x] Received body:\t%r" % body)
 
-channel.basic_consume(callback, queue, no_ack=True)
+channel.basic_consume(queue, callback, auto_ack=True)
 
 logging.info(" [*] Connecting to:\t%r" % amqp_url)
 logging.info(" [*] Waiting for messages...")
