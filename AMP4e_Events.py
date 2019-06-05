@@ -36,7 +36,7 @@ for e in event_streams:
     if e['name'] is EVENT_STREAM_NAME:
         event_stream = e
 
-amqp_url = 'amqps://{user_name}:INPUT YOUR URL NUMBER HERE@{host}:{port}'.format(
+amqp_url = 'amqps://{user_name}:INPUT YOUR PW HERE@{host}:{port}'.format(
     **e['amqp_credentials'])
 queue = e['amqp_credentials']['queue_name']
 parameters = pika.URLParameters(amqp_url)
